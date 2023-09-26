@@ -18,8 +18,8 @@ class CreateProfilesTable extends Migration
             $table->string('name');
             $table->integer('age');
             $table->string('contact',11);
-            $table->unsignedBigInteger('id');
-            $table->foreign('id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('user_id')->on('users');
             $table->timestamps();
         });
     }

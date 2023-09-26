@@ -12,7 +12,7 @@ class Profile extends Model
     protected $primarykey = 'profile_id';
     use HasFactory;
     public function getuser(){
-        return $this->hasOne('App\Models\User','id', 'id');
+        return $this->hasOne('App\Models\User','user_id', 'user_id');
     }
     
 }
