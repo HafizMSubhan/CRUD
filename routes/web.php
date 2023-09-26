@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\IndexController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +21,7 @@ Route::resource('products', ProductController::class);
 
 // Route::get('/products', 'ProductController@index')->name('products.index');
 
-
+Route::get('/data',[IndexController::class, 'index']);
 
 Route::get('/', function () {
     return view('welcome');
